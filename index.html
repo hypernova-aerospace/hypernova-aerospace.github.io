@@ -1,0 +1,1494 @@
+<!-- Inicio de la página web de Hypernova Aerospace -->
+<!-- Desarrollado por: Ángel Samuel Reséndiz González -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <title>Hypernova Aerospace - Club Aeroespacial</title>
+ 
+     <!-- POSICIONAMIENTO SEO -->
+    <meta name="keywords" content="Hypernova, Aerospace, Club aeroespacial, aerospace club, ESIME Tic, ESIME Ticoman, ESIME Ticomán">
+    <meta name="description" content="Hypernova Aerospace somos un club aeroespacial dedicada a la creación de cohetes aeroespaciales, TELECOMUNICACIONES, AVIONICA, AVIÓNICA, CARGA UTIL, CARGA ÚTIL, AERODINAMICA, AERODINÁMICA">
+    <link rel="canonical" href="https://hypernova-aerospace.github.io/" />
+    <meta  itemprop='name'  content='Hypernova Aerospace | Club Aeroespacial' />
+
+     <!-- Meta para Open Graph -->
+     <link rel="canonical" href="https://hypernova-aerospace.github.io/" />
+     <meta property="og:locale" content="es_Es">
+     <meta property="og:type" content="website">
+     <meta property="og:title" content="Hypernova Aerospace - Club Aeroespacial">
+     <meta property="og:description" content="Adminitradores Ambientales Destruccion Fiscal somos una empresa dedicada a las DESTRUCCIONES FISCALES, RECICLADO DE DESPERDICIOS, SERVICIO INTEGRAL DE RECOLECCIÓN DE RESIDUOS y al cuidado del medio ambiente">
+     <meta property="og:url" content="https://hypernova-aerospace.github.io/">
+     <meta property="og:site_name" content="Hypernova Aerospace - Club Aeroespacial">
+
+    <!-- Meta para la cabecera Content Security Policy-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'unsafe-inline' 'unsafe-eval'">-->
+
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+
+
+    <!-- CODIGO CSS -->
+    <link rel="stylesheet" href="./files/mainResponsive.css">
+    <link rel="stylesheet" href="./files/index.css">
+    <link rel="shortcut icon" href="./imgs/favicon.webp" type="image/x-icon">
+
+    <!-- ESTILOS DE LETRA -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <header class="header">
+    <style>
+        /* General Reset */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        /* Header Styles */
+        .header {
+          position: relative;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden; /* Asegura que no se muestren partes del video fuera del área */
+        }
+
+        /* Video Background */
+        .header video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* Hace que el video cubra todo el fondo sin deformarse */
+          z-index: -1; /* El video estará detrás del contenido */
+        }
+
+        /* Overlay for Darker Effect */
+        .header .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          z-index: 1;
+        }
+
+        .header-overlay {
+          text-align: center;
+          color: white;
+          position: relative;
+          z-index: 2;
+        }
+        
+  /* Efecto de escritura */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* Efecto de parpadeo del cursor */
+  @keyframes blink-caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  /* Estilos para el texto y aplicación de animaciones */
+  .header-text {
+    font: bold 5vw Consolas, Monaco, monospace; /* Tamaño moderado con vw para ser proporcional */
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid white; /* Simula el cursor */
+    width: max-content; /* Ajuste automático para que el texto se acomode */
+    animation: typing 4s steps(20, end) forwards, /* Efecto de escritura */
+               blink-caret 0.75s step-end infinite; /* Parpadeo del cursor en loop */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Efecto de brillo */
+    max-width: 90vw; /* Asegura que el texto no se salga de la pantalla */
+    display: inline-block;
+  }
+
+  /* Media query para pantallas medianas */
+  @media (max-width: 768px) {
+    .header-text {
+      font-size: 7vw; /* Ajuste más grande en pantallas pequeñas */
+      max-width: 95vw; /* Permite más espacio en pantallas medianas */
+    }
+  }
+
+  /* Media query para pantallas muy pequeñas */
+  @media (max-width: 480px) {
+    .header-text {
+      font-size: 8vw; /* Ajuste aún más grande en pantallas pequeñas */
+      max-width: 95vw; /* Asegura que se vea bien en pantallas muy pequeñas */
+    }
+  }
+
+  /* Media query para pantallas grandes */
+  @media (min-width: 1200px) {
+    .header-text {
+      font-size: 4vw; /* Tamaño moderado en pantallas grandes */
+      max-width: 80vw; /* Ajuste en pantallas grandes */
+    }
+  }
+        /* Navigation Styles */
+        .nav {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px;
+          background-color: rgba(0, 0, 0, 0.6);
+          z-index: 3; /* Ensure navbar is above the overlay */
+        }
+
+        .nav-links {
+          list-style: none;
+          display: flex;
+        }
+
+        .nav-links li {
+          margin-left: 20px;
+        }
+
+        .nav-links a {
+          color: white;
+          text-decoration: none;
+          font-size: 1.2rem;
+          display: flex;
+          align-items: center;
+        }
+
+        .nav-links a i {
+          margin-right: 8px; /* Add space between icon and text */
+        }
+
+        .nav-links a:hover {
+          color: #ffdd57;
+        }
+
+        .logo img {
+          height: 75px; /* Adjust as needed */
+          width: 175px;
+        }
+
+        .hamburger {
+          display: none;
+          flex-direction: column;
+          cursor: pointer;
+        }
+
+        .hamburger span {
+          width: 25px;
+          height: 3px;
+          background-color: white;
+          margin: 3px 0;
+          transition: 0.4s;
+        }
+
+        /* Sidebar Menu */
+        .sidebar-menu {
+          position: fixed;
+          top: 0;
+          left: -100%; /* Initially hidden off-screen */
+          width: 100%;
+          height: 100%;
+          background-color: #1a1a1a;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+          transition: 0.4s;
+          z-index: 10; /* Ensure it overlays all content */
+        }
+
+        /* Close Icon Style */
+        .close-icon {
+          position: absolute;
+          top: 290px;
+          right: 200px;
+          font-size: 2rem;
+          cursor: pointer;
+          background: linear-gradient(45deg, #FFD700, #FFA500); /* Elegant gold gradient */
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          display: none; /* Hidden by default */
+          transition: 0.3s;
+        }
+
+        .sidebar-menu.active .close-icon {
+          display: block; /* Show close icon when sidebar is active */
+        }
+
+        .sidebar-menu ul {
+          list-style: none;
+          text-align: center;
+          margin-top: 30px;
+        }
+
+        .sidebar-menu li {
+          margin: 20px 0;
+        }
+
+        .sidebar-menu li a {
+          color: white;
+          text-decoration: none;
+          font-size: 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .sidebar-menu li a i {
+          margin-right: 10px; /* Space between icon and text */
+        }
+
+        .sidebar-menu.active {
+          left: 0; /* Slide-in from the left */
+        }
+
+        /* Overlay for the sidebar when active */
+        .sidebar-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.8);
+          display: none;
+          z-index: 9; /* Behind the sidebar */
+        }
+
+        .sidebar-overlay.active {
+          display: block; /* Show overlay when sidebar is active */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+          .nav-links {
+            display: none;
+          }
+
+          .hamburger {
+            display: flex;
+          }
+        }
+
+
+
+  
+
+    /* Earth Image Styles */
+    .earthImg {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Centra la imagen en la pantalla */
+      width: 50%;
+      z-index: 2;
+    }
+
+    /* Alien and Moon Images */
+    .moonImg,
+    .alienImg {
+      position: absolute;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .moonImg {
+      top: 22%;
+      left: 80%;
+      width: 12%;
+    }
+
+    .alienImg {
+      top: 20%;
+      left: 5%;
+      width: 20%;
+    }
+
+
+
+    /* Barra de desplazamiento personalizada */
+    ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #e070f7;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e070f7;
+        }
+
+
+</style>
+
+    <!-- Video Background -->
+    <video autoplay muted loop>
+        <source src="./imgs/stars.mp4" type="video/mp4">
+        Tu navegador no soporta el formato de video.
+    </video>
+
+    <!-- Overlay for Dark Effect -->
+    <div class="overlay"></div>
+
+    <!-- Earth Image -->
+    <img src="./imgs/earth.png" alt="Earth image" class="earthImg">
+
+    <!-- Alien and Moon Images -->
+    <img src="./imgs/moon.png" alt="Moon image" class="moonImg">
+    <img src="./imgs/alien.png" alt="Alien image" class="alienImg">
+
+    <!-- Header Overlay Text -->
+    <div class="header-overlay">
+        <h1 class="header-text">Hypernova Aerospace!</h1>
+    </div>
+</section>
+    
+
+    <nav class="nav">
+        <div class="logo">
+            <a href="#"><img src="./imgs/logo-nobg.png" alt="Club Aeroespacial Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="#nosotros"><i class="fas fa-info-circle"></i> Nosotros</a></li>
+            <li><a href="#misiones"><i class="fas fa-rocket"></i> Próximas Misiones</a></li>
+            <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</header>
+<br>
+
+<!-- Sidebar Menu with Overlay -->
+<div class="sidebar-overlay"></div>
+<div class="sidebar-menu">
+    <!-- Close Icon for Sidebar Menu -->
+    <span class="close-icon">&times;</span>
+    <!-- Logo at the top of the sidebar menu -->
+    <div class="logo">
+        <img src="./imgs/logo-nobg.png" alt="Club Aeroespacial Logo">
+    </div>
+    <ul>
+        <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+        <br></br>
+        <li><a href="#nosotros"><i class="fas fa-info-circle"></i> Nosotros</a></li>
+        <br></br>
+        <li><a href="#misiones"><i class="fas fa-rocket"></i> Próximas Misiones</a></li>
+        <br></br>
+        <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+    </ul>
+</div>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const sidebarMenu = document.querySelector('.sidebar-menu');
+    const sidebarOverlay = document.querySelector('.sidebar-overlay');
+    const closeIcon = document.querySelector('.close-icon');
+
+    hamburger.addEventListener('click', () => {
+        sidebarMenu.classList.toggle('active');
+        sidebarOverlay.classList.toggle('active');
+    });
+
+    // Close sidebar when clicking on the overlay or close icon
+    sidebarOverlay.addEventListener('click', () => {
+        sidebarMenu.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
+    });
+    closeIcon.addEventListener('click', () => {
+        sidebarMenu.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
+    });
+</script>
+
+<body>
+<!-- Hero Section -->
+<section class="hero">
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const heroContent = document.querySelector(".hero-content");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              heroContent.classList.add("appear");
+            } else {
+              heroContent.classList.remove("appear");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      observer.observe(heroContent);
+    });
+  </script>
+
+  <br>
+
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="text-container">
+      <div class="icon-header">
+        <i class="fas fa-rocket"></i>
+        <i class="fas fa-satellite-dish"></i>
+      </div>
+      <h2>Bienvenido al Sitio Oficial de Hypernova Aerospace</h2>
+      <p>
+        Nos dedicamos a diseñar, construir y operar proyectos innovadores, tales como Can-Sats, Cube-Sats, y Cohetes de Alta Potencia para el desarrollo de misiones espaciales reales.
+      </p>
+      
+      <!-- Imagen del equipo -->
+      <div class="image-highlight">
+        <img src="./imgs/equipo-2.webp" alt="Equipo Hypernova Aerospace" class="team-photo">
+        
+        <!-- Flechas animadas en las esquinas -->
+        <div class="arrow top-left"></div>
+        <div class="arrow top-right"></div>
+        <div class="arrow bottom-left"></div>
+        <div class="arrow bottom-right"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br>
+
+<section class="about">
+  <div class="container">
+    <h6 class="about-title">Sobre Nosotros</h6>
+    <div class="about-content">
+      <div class="about-text">
+        <p class="about-description">
+        <h6><i class="fas fa-rocket" style="color: #08bff7; margin-right: 8px;"></i>Somos una asociación dedicada a proyectos aeroespaciales del Instituto Politécnico Nacional conformado por estudiantes y profesionistas multidisciplinarios, unidos por una pasión común. Emprendedores(as) e ingenieros(as) llenos de talento con ideas innovadoras que contribuirán a tener un futuro mejor. <i class="fas fa-satellite" style="color: #2196f3; margin-left: 8px;"></i></h6>
+
+        <div class="imgs-cont">
+    <a href="https://www.ipn.mx" target="_blank">
+        <img src="./imgs/logo_ipn.png" alt="IPN" class="glitch">
+    </a>
+
+    <a href="test.com" target="_blank">
+        <img src="./imgs/logo-general.jpg" alt="HYPERNOVA" class="glitch">
+    </a>
+</div>
+
+
+        </div>
+      <br>
+      <div class="about-images">
+        
+        <div class="image-container">
+          <img src="./imgs/payloads.webp" alt="Innovación en payloads" class="about-image">
+          <div class="image-text-container">
+  <p class="image-text">Nanosatélites y Cargas Útiles</p>
+</div>
+
+        </div>
+        <div class="image-container">
+          <img src="./imgs/aero-estr.webp" alt="Estructuras Aeroespaciales" class="about-image">
+          <div class="image-text-container">
+  <p class="image-text">Aeroestructuras</p>
+</div>
+        </div>
+        <div class="image-container">
+          <img src="./imgs/coheteria-exp.webp" alt="Experimentación en Cohetería" class="about-image">
+          <div class="image-text-container">
+  <p class="image-text">Cohetería experimental</p>
+</div>
+        </div>
+        <div class="image-container">
+          <img src="./imgs/recu.webp" alt="Recomendaciones de Seguridad" class="about-image">
+          <div class="image-text-container">
+  <p class="image-text">Sistema de recuperación</p>
+</div>
+        </div>
+        <div class="image-container">
+          <img src="./imgs/stations.webp" alt="Estaciones de Investigación" class="about-image">
+          <div class="image-text-container">
+  <p class="image-text">Estaciones Terrenas y Antenas</p>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<br>
+
+<section class="services">
+  <style>
+    /* Contenedor de la carretera */
+.sky {
+    position: relative;
+    width: 100%; /* Ajustar según el contenedor */
+    height: 100px; /* Altura de la carretera */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+    background-image: url('./imgs/coleccion-nubes-dibujos-animados_23-2149016996.avif'); /* Imagen de fondo */
+    background-size: cover; /* Cubre todo el contenedor */
+    border-radius: 15px; /* Bordes redondeados */
+    margin: 20px auto; /* Centrando el contenedor */
+}
+
+/* Estilo del camioncito (emoji) */
+.airplane {
+    position: absolute;
+    font-size: 40px; /* Tamaño del emoji */
+    animation: moveAirplane 5s linear infinite; /* Animación de movimiento */
+    top: 20px; /* Ajusta la posición vertical según sea necesario */
+}
+
+/* Animación para mover la aeronave hacia adelante */
+@keyframes moveAirplane {
+    0% {
+        right: -60px; /* Comienza fuera del lado derecho */
+    }
+    100% {
+        right: 100%; /* Termina fuera del lado izquierdo */
+    }
+}
+
+</style>
+  <div class="container">
+    <h4 class="services-title">En Hypernova Aerospace...</h4>
+    <div class="sky">
+                <div class="airplane">🛩</div>
+            </div>
+    <div class="about-text">
+      <p>Seguimos un riguroso proceso de manufactura y ensamblaje de nuestros prototipos para garantizar el éxito en cada misión, desde el primer diseño hasta el lanzamiento final.</p>
+    </div>
+    <br>
+  </div>
+  <div class="services-grid">
+    <div class="service-item">
+      <h5>Procesos de Manufactura</h5>
+      <img src="./imgs/manufactura.webp" alt="Procesos de Manufactura">
+    </div>
+    <div class="service-item">
+      <h5>Armado y Ensamble de Etapas</h5>
+      <img src="./imgs/armado.webp" alt="Armado y Ensamble de Etapas">
+    </div>
+    <div class="service-item">
+      <h5>Pruebas y Lanzamientos</h5>
+      <img src="./imgs/tests.webp" alt="Pruebas y Lanzamientos">
+    </div>
+    <div class="service-item">
+      <h5>Recuperación</h5>
+      <img src="./imgs/recu-2.webp" alt="Recuperación">
+    </div>
+  </div>
+</section>
+
+<br>
+
+
+<section class="sponsors">
+  <style>
+    /* Sponsors Section */
+.sponsors {
+    background: linear-gradient(135deg, #2c3e50, #4c6a92); /* Gradiente elegante de fondo oscuro a azul */
+    padding: 100px 0; /* Mayor espacio vertical para un diseño más espacioso */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Fuente elegante y moderna */
+}
+
+.sponsors h6 {
+    font-size: 32px; /* Título más grande */
+    color: #fff; /* Color blanco para resaltar */
+    font-weight: 700; /* Peso de fuente más alto para un toque sofisticado */
+    text-transform: uppercase;
+    margin-bottom: 70px; /* Más espacio entre el título y las imágenes */
+    letter-spacing: 4px; /* Espaciado de letras más amplio */
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra sutil en el texto para darle más profundidad */
+}
+
+/* Grid de patrocinadores */
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas iguales en la cuadrícula */
+    gap: 40px; /* Espaciado uniforme entre las imágenes */
+    justify-items: center; /* Centrado de las imágenes */
+    align-items: center;
+    padding: 0 30px; /* Espacio adicional alrededor de la grid */
+}
+
+/* Elementos de los patrocinadores */
+.sponsor-item img {
+    max-width: 180px; /* Tamaño de las imágenes para que todas sean del mismo tamaño */
+    height: auto;
+    opacity: 0.85; /* Opacidad ligeramente más baja para el toque sutil */
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transición más suave */
+    border-radius: 15px; /* Bordes más redondeados para un estilo más suave y elegante */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra sutil alrededor de las imágenes */
+}
+
+/* Efecto hover */
+.sponsor-item img:hover {
+    opacity: 1; /* Aumenta la opacidad al pasar el ratón */
+    transform: scale(1.1); /* Mayor aumento al pasar el ratón */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Sombra más profunda para el efecto hover */
+}
+
+/* Contenedor de patrocinadores */
+.sponsors .container {
+    background: rgba(0, 0, 0, 0.4); /* Fondo más oscuro pero elegante */
+    padding: 50px 50px 80px; /* Espaciado cómodo */
+    border-radius: 20px; /* Bordes más redondeados */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3); /* Sombra más profunda para darle más lujo */
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* Para que los elementos de las sombras no sobresalgan */
+}
+
+.sponsors .container::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borde más sutil y elegante */
+    border-radius: 20px;
+    z-index: -1; /* Coloca el borde debajo del contenido */
+    transition: all 0.5s ease-in-out;
+}
+
+.sponsors .container:hover::before {
+    border-color: rgba(255, 255, 255, 0.7); /* Mejora el borde al pasar el ratón */
+}
+
+/* Efecto de fade-in al cargar la página */
+.sponsors-grid {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad: para pantallas de 1200px o más (pantallas grandes) */
+@media (max-width: 1200px) {
+    .sponsors-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas para pantallas más pequeñas */
+    }
+}
+
+/* Responsividad: para pantallas de 992px o más (tabletas y pantallas medianas) */
+@media (max-width: 992px) {
+    .sponsors-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas para pantallas medianas */
+    }
+}
+
+/* Responsividad: para pantallas de 768px o más (tabletas y pantallas más pequeñas) */
+@media (max-width: 768px) {
+    .sponsors-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para pantallas más pequeñas */
+        gap: 20px; /* Menor espacio entre imágenes */
+    }
+}
+
+/* Responsividad: para pantallas de 480px o más (dispositivos móviles pequeños) */
+@media (max-width: 480px) {
+    .sponsors-grid {
+        grid-template-columns: 1fr; /* 1 columna para dispositivos móviles */
+        gap: 15px; /* Espacio reducido entre imágenes */
+    }
+}
+
+    </style>
+    <div class="container">
+        <h6>Nuestros Patrocinadores</h6>
+        <div class="sponsors-grid">
+    <div class="sponsor-item">
+        <a href="https://www.grupossc.com/" target="_blank">
+            <img src="./imgs/sponsor1.webp" alt="Sponsor 1">
+        </a>
+    </div>
+    <div class="sponsor-item">
+        <a href="https://pcb-mexico.com/" target="_blank">
+            <img src="./imgs/sponsor2.webp" alt="Sponsor 2">
+        </a>
+    </div>
+    <div class="sponsor-item">
+        <a href="https://uelectronics.com/?ref=29426" target="_blank">
+            <img src="./imgs/sponsor3.webp" alt="Sponsor 3">
+        </a>
+    </div>
+    <div class="sponsor-item">
+        <a href="https://www.altium.com/es/" target="_blank">
+            <img src="./imgs/sponsor4.webp" alt="Sponsor 4">
+        </a>
+    </div>
+    <div class="sponsor-item">
+        <a href="https://www.solidworks.com/es" target="_blank">
+            <img src="./imgs/sponsor5.webp" alt="Sponsor 5">
+        </a>
+    </div>
+</div>
+
+        </div>
+    </div>
+</section>
+
+
+
+  <br>
+
+
+
+  <footer>
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2024 Hypernova Aerospace 🇲🇽. Todos los derechos reservados.</p>
+            <p>Contacto: <a href="mailto:ipnspace.mx@gmail.com">ipnspace.mx@gmail.com</a></p>
+            <p>Redes sociales:</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100090806388122" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/hypernova.aerospace/" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/Cohetes_ipn_m" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            <p class="imposing-text">Sitio asegurado por DMCA y ciberprotegido</p>
+        </div>
+        <div class="footer-image">
+            <img src="./imgs/astronautOvni.png" alt="Logo en 360 grados" class="rotating-image">
+        </div>
+    </div>
+</footer>
+
+
+  <style>
+      /* General Styles */
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Helvetica Neue', Arial, sans-serif;
+          background-color: #f4f4f4;
+          color: #333;
+      }
+
+      h2, h3 {
+    color: #f7f3f3; /* Color base */
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    
+    /* Gradiente en el texto */
+    background: linear-gradient(90deg, #f1f1f1, #f7a1e1, #8df1f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Glow Effect */
+    text-shadow: 0 0 8px rgba(163, 237, 240, 0.8), /* Luz suave alrededor */
+                 0 0 15px rgba(243, 164, 230, 0.6); /* Luz secundaria */
+}
+
+/* Mejora del gradiente en hover */
+h2:hover, h3:hover {
+    background: linear-gradient(90deg, #d4daf5, #f1b4f3, #f3a3a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 12px rgba(167, 203, 243, 0.9),
+                 0 0 20px rgba(245, 152, 245, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+
+      p {
+          font-size: 1rem;
+          line-height: 1.6;
+          color: #fdfafa;
+      }
+      
+      /* Hero Section */
+.hero {
+    position: relative;
+    height: 50vh; /* La altura debe ser siempre la altura de la ventana del navegador */
+    background: url('./imgs/elegant-bg.avif') no-repeat center center;
+    background-size: cover; /* Asegura que la imagen cubra completamente el fondo sin distorsión */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Image Highlight Styles */
+.image-highlight {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.team-photo {
+  width: 100%;
+  max-width: 800px; /* Aumenta el tamaño máximo de la imagen */
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-photo:hover {
+  transform: scale(1.1); /* Aumenta el efecto de escala al pasar el ratón */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+}
+
+/* Arrow Styles */
+.arrow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #00d1ff;
+  transform: rotate(45deg);
+  box-shadow: 0 0 15px rgba(0, 209, 255, 0.6);
+  animation: pulse 1.5s infinite alternate;
+}
+
+.top-left {
+  top: -15px;
+  left: -15px;
+}
+
+.top-right {
+  top: -15px;
+  right: -15px;
+}
+
+.bottom-left {
+  bottom: -15px;
+  left: -15px;
+}
+
+.bottom-right {
+  bottom: -15px;
+  right: -15px;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  from {
+    transform: scale(1) rotate(45deg);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.2) rotate(45deg);
+    opacity: 0.7;
+  }
+}
+
+.hero-content.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-container {
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* Para pantallas pequeñas (móviles y tabletas) */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh; /* Reduce la altura en pantallas pequeñas */
+  }
+
+  .hero-content {
+    padding: 0 15px;
+    transform: translateY(0); /* Asegura que el contenido esté centrado al inicio */
+    opacity: 1;
+  }
+
+  .team-photo {
+    max-width: 100%; /* Hace la imagen más pequeña en pantallas pequeñas */
+  }
+
+  .arrow {
+    width: 10px;
+    height: 10px; /* Reduce el tamaño de las flechas */
+  }
+
+  .text-container {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+
+/* Para pantallas medianas (tabletas grandes) */
+@media (max-width: 1024px) {
+  .hero {
+    height: 110vh; /* Ajusta la altura para pantallas medianas */
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .team-photo {
+    max-width: 90%; /* Ajusta el tamaño de la imagen */
+  }
+
+  .arrow {
+    width: 12px;
+    height: 12px;
+  }
+
+  .text-container {
+    padding: 30px;
+  }
+}
+
+/* Para pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+  .hero {
+    height: 120vh;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .team-photo {
+    max-width: 800px;
+  }
+
+  .arrow {
+    width: 12px;
+    height: 12px;
+  }
+
+  .text-container {
+    padding: 40px;
+  }
+}
+
+    .icon-header {
+        font-size: 2.5rem;
+        color: #f4c542;
+        margin-bottom: 15px;
+    }
+
+    .icon-header i {
+        margin: 0 10px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: #ddd;
+    }
+
+    /* Media Query for Responsive Design */
+    @media (max-width: 768px) {
+        .text-container {
+            padding: 30px;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .icon-header {
+            font-size: 2rem;
+        }
+    }
+    /* Sobre Nosotros Section */
+.about {
+  background: linear-gradient(135deg, #9c05fa, #f581d8, #70d6f5); /* Gradiente entre tonos púrpura y azul */
+  padding: 80px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.about-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #080808;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transform: translateX(10px);
+}
+
+.about-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; /* Ajusta la distancia de la línea respecto al texto */
+    left: 50%; /* Centra la línea horizontalmente */
+    width: 50%; /* Ajusta el largo de la línea */
+    height: 2px; /* Grosor de la línea */
+    background-color: #000; /* Color de la línea */
+    opacity: 0.4; /* Opacidad de la línea para un efecto sutil */
+    border-radius: 1px; /* Bordes redondeados para la línea */
+    transform: translateX(-50%); /* Ajusta la línea para que esté centrada */
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+
+/* Contenedor de texto */
+.about-text {
+  flex: 1 1 60%;
+  font-size: 30px;
+  color: #2e2e2e; /* Gris oscuro para elegancia */
+  line-height: 1.8;
+  text-align: justify;
+  max-width: 600px;
+  font-family: 'Georgia', serif; /* Tipografía elegante y clásica */
+  background: rgba(255, 255, 255, 0.5); /* Fondo más transparente */
+  padding: 30px;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave */
+}
+
+
+.about-images {
+  position: relative;
+  width: 520px;
+  height: 350px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10%;
+}
+
+.image-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgs-cont {
+    display: flex;               /* Utilizamos flexbox para alinear las imágenes en una fila */
+    justify-content: center;     /* Centra las imágenes en el contenedor */
+    align-items: center;         /* Alinea las imágenes verticalmente en el centro */
+    gap: 80px;                   /* Aumenta el espacio entre las imágenes */
+}
+
+.imgs-cont img {
+    max-width: 150px;            /* Establece un tamaño máximo mayor para las imágenes */
+    width: 100%;                 /* Permite que la imagen se ajuste al 100% de su contenedor */
+    height: auto;                /* Mantiene la proporción de las imágenes */
+    transition: transform 0.3s ease; /* Añadimos una transición suave para el hover */
+}
+
+.imgs-cont img:hover {
+    transform: scale(1.1);       /* Hace un pequeño zoom en las imágenes cuando se pasa el cursor */
+}
+
+
+
+.glitch {
+    position: relative;
+    top: 20px;
+    width: 30%; /* Aumenta el tamaño de la imagen */
+    height: auto;
+    animation: glitch-anim 1s infinite;
+    filter: drop-shadow(0 0 10px rgba(250, 250, 250, 0.8));
+    border-radius: 10px;
+    display: block; /* Permite centrar la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+
+.about-image {
+  width: 100%;
+  height: 80%;
+  border-radius: 6%;
+  object-fit: cover;
+}
+
+
+
+.image-text {
+  margin: 0; /* Ajusta el margen del texto */
+  font-size: 26px;
+  background: #080808;
+  font-family: 'Georgia', serif;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  line-height: 1.5;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+
+
+/* Animación de desvanecimiento */
+@keyframes fadeInOut {
+  0%, 20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  25%, 95% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Asignación de animaciones a los contenedores */
+.image-container:nth-child(1) {
+  animation: fadeInOut 25s infinite 0s;
+}
+.image-container:nth-child(2) {
+  animation: fadeInOut 25s infinite 5s;
+}
+.image-container:nth-child(3) {
+  animation: fadeInOut 25s infinite 10s;
+}
+.image-container:nth-child(4) {
+  animation: fadeInOut 25s infinite 15s;
+}
+.image-container:nth-child(5) {
+  animation: fadeInOut 25s infinite 20s;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-text {
+    text-align: center;
+    font-size: 20px;
+    max-width: 90%;
+  }
+
+  .about-images {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+
+
+/* Sección de Servicios */
+.services {
+  background: linear-gradient(to right, #fc7d7d, #555555); /* Fondo degradado elegante */
+  padding: 80px 0; /* Espaciado generoso */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff; /* Texto blanco para contraste */
+}
+
+/* Contenedor principal */
+.container-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrado horizontal */
+  justify-content: center; /* Centrado vertical */
+  max-width: 1300px; /* Ancho máximo de la sección */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 0 30px;
+  position: absolute; /* Posiciona el contenedor de manera absoluta */
+  top: 50%; /* Mueve el contenedor al centro vertical de la pantalla */
+  left: 50%; /* Mueve el contenedor al centro horizontal de la pantalla */
+  transform: translate(-50%, -50%); /* Ajusta el contenedor para que esté exactamente en el centro */
+}
+
+
+/* Título de la sección */
+.services-title {
+  font-size: 40px; /* Título grande y llamativo */
+  font-weight: 700;
+  color: #f1f1f1; /* Blanco suave */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif; /* Fuente moderna y elegante */
+}
+
+/* Descripción bajo el título */
+.about-text p {
+  font-size: 22px; /* Texto claro y legible */
+  color: #080808; /* Gris suave */
+  line-height: 1.8;
+  max-width: 80%;
+  margin-bottom: 60px;
+  font-weight: 300; /* Peso ligero */
+  font-family: 'Roboto', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilos para la cuadrícula de servicios */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajuste automático a diferentes tamaños de pantalla */
+  gap: 40px; /* Espaciado entre los elementos */
+  width: 100%;
+  padding: 0 30px;
+}
+
+/* Estilo para cada tarjeta de servicio */
+.service-item {
+  background: linear-gradient(to right, rgba(227, 245, 146, 0.7), rgba(75, 163, 235, 0.7));
+
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 40px; /* Espaciado interior adecuado */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave y sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  max-width: 320px; /* Ancho máximo */
+  width: 100%;
+}
+
+.service-item:hover {
+  transform: translateY(-12px); /* Efecto de elevación suave */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Sombra más intensa en hover */
+}
+
+/* Subtítulos de cada servicio */
+.service-item h5 {
+  font-size: 28px; /* Títulos prominentes */
+  color: #333; /* Color oscuro */
+  font-weight: 600;
+  margin-bottom: 20px; /* Separación adecuada */
+  font-family: 'Roboto', sans-serif;
+  text-transform: capitalize;
+}
+
+/* Imágenes de cada servicio */
+.service-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px; /* Bordes redondeados para las imágenes */
+  transition: transform 0.3s ease;
+}
+
+.service-item img:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #111, #6391c0, #1b2838); /* Fondo oscuro elegante con tonos azul-gris */
+    color: white;
+    padding: 60px 0; /* Espaciado más amplio para un efecto más lujoso */
+    text-align: center;
+    font-family: 'Playfair Display', serif; /* Fuente serif elegante para mayor lujo */
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave alrededor para dar profundidad */
+}
+
+.footer-content {
+    margin-bottom: 40px; /* Espacio amplio entre el contenido y la imagen */
+}
+
+.footer-content p {
+    font-size: 1.5rem;
+    color: #dcdcdc; /* Gris claro elegante */
+    margin-bottom: 20px; /* Espaciado entre párrafos */
+    line-height: 1.7; /* Aumentamos el interlineado para mayor claridad */
+}
+
+.footer-content a {
+    color: #f10fcb; /* Color elegante dorado-rosado para los enlaces */
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: all 0.4s ease;
+}
+
+.footer-content a:hover {
+    color: #e67e22; /* Dorado cálido al pasar el ratón */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Resplandor dorado suave */
+}
+
+.social-icons {
+    margin: 30px 0;
+}
+
+.social-icons a {
+    margin: 0 25px;
+    font-size: 2rem; /* Íconos más grandes */
+    color: #f1750f; /* Color dorado para los íconos */
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.3); /* Aumento suave al pasar el ratón */
+    color: #f3f0f0; /* Color cálido en hover */
+}
+
+.imposing-text {
+    font-size: 1.8rem; /* Aumentamos el tamaño para hacerlo más impresionante */
+    color: #fff;
+    font-weight: 900; /* Aumentamos el peso de la fuente para mayor énfasis */
+    text-transform: uppercase;
+    margin-top: 30px;
+    letter-spacing: 3px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Sombra de texto para un toque lujoso */
+}
+
+.footer-image {
+    margin-top: 50px;
+}
+
+.rotating-image {
+    width: 180px; /* Imagen más grande para darle mayor presencia */
+    height: auto;
+    animation: rotate360 10s infinite linear; /* Animación más fluida y sutil */
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 30px 10px;
+    }
+
+    .social-icons a {
+        font-size: 1.6rem;
+    }
+
+    .footer-image img {
+        width: 150px; /* Imagen más pequeña en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content p {
+        font-size: 1.1rem; /* Tamaño de texto más pequeño en pantallas móviles */
+    }
+
+    .social-icons a {
+        font-size: 1.4rem;
+        margin: 0 15px;
+    }
+
+    .rotating-image {
+        width: 140px; /* Imagen más pequeña para móviles */
+    }
+}
+
+  </style>
+</body>
+</html>
+

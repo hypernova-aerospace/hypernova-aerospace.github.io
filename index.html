@@ -224,22 +224,7 @@
         }
 
         /* Close Icon Style */
-        .close-icon {
-          position: absolute;
-          top: 290px;
-          right: 200px;
-          font-size: 2rem;
-          cursor: pointer;
-          background: linear-gradient(45deg, #FFD700, #FFA500); /* Elegant gold gradient */
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          display: none; /* Hidden by default */
-          transition: 0.3s;
-        }
-
-        .sidebar-menu.active .close-icon {
-          display: block; /* Show close icon when sidebar is active */
-        }
+   
 
         .sidebar-menu ul {
           list-style: none;
@@ -553,42 +538,56 @@
 
 <section class="services">
   <style>
-    /* Contenedor de la carretera */
-.sky {
-    position: relative;
-    width: 100%; /* Ajustar según el contenedor */
-    height: 100px; /* Altura de la carretera */
-    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
-    background-image: url('./imgs/coleccion-nubes-dibujos-animados_23-2149016996.avif'); /* Imagen de fondo */
-    background-size: cover; /* Cubre todo el contenedor */
-    border-radius: 15px; /* Bordes redondeados */
-    margin: 20px auto; /* Centrando el contenedor */
-}
-
-/* Estilo del camioncito (emoji) */
-.airplane {
-    position: absolute;
-    font-size: 40px; /* Tamaño del emoji */
-    animation: moveAirplane 5s linear infinite; /* Animación de movimiento */
-    top: 20px; /* Ajusta la posición vertical según sea necesario */
-}
-
-/* Animación para mover la aeronave hacia adelante */
-@keyframes moveAirplane {
-    0% {
-        right: -60px; /* Comienza fuera del lado derecho */
+    /* Contenedor del cielo */
+    .sky {
+        position: relative;
+        width: 100%; /* Ajustar según el contenedor */
+        height: 100px; /* Altura del contenedor */
+        overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+        background-image: url('./imgs/coleccion-nubes-dibujos-animados_23-2149016996.avif'); /* Imagen de fondo */
+        background-size: cover; /* Cubre todo el contenedor */
+        border-radius: 15px; /* Bordes redondeados */
+        margin: 20px auto; /* Centrando el contenedor */
     }
-    100% {
-        right: 100%; /* Termina fuera del lado izquierdo */
-    }
-}
 
+    /* Estilo del avión 1 */
+    .airplane {
+        position: absolute;
+        width: 60px; /* Ajusta el tamaño de la imagen del avión */
+        height: auto;
+        animation: moveAirplane 5s linear infinite; /* Animación de movimiento */
+        top: 20px; /* Ajusta la posición vertical según sea necesario */
+    }
+
+    /* Estilo del avión 2 */
+    .airplane-2 {
+        position: absolute;
+        width: 60px; /* Ajusta el tamaño de la imagen del avión */
+        height: auto;
+        animation: moveAirplane 5s linear infinite; /* Animación de movimiento */
+        top: 50px; /* Posiciona un poco más abajo para diferenciarlos */
+        animation-delay: 2.5s; /* Retraso en el inicio para crear separación */
+    }
+
+    /* Animación para mover los aviones de derecha a izquierda */
+    @keyframes moveAirplane {
+        0% {
+            right: -60px; /* Comienza fuera del lado derecho */
+        }
+        100% {
+            right: 100%; /* Termina fuera del lado izquierdo */
+        }
+    }
 </style>
-  <div class="container">
+
+<div class="container">
     <h4 class="services-title">En Hypernova Aerospace...</h4>
     <div class="sky">
-                <div class="airplane">🛩</div>
-            </div>
+        <img src="./imgs/747.png" alt="Avión 1" class="airplane">
+    </div>
+</div>
+
+
     <div class="about-text">
       <p>Seguimos un riguroso proceso de manufactura y ensamblaje de nuestros prototipos para garantizar el éxito en cada misión, desde el primer diseño hasta el lanzamiento final.</p>
     </div>
@@ -797,7 +796,7 @@
                     <i class="fab fa-tiktok"></i>
                 </a>
             </div>
-            <p class="imposing-text">Sitio asegurado por DMCA y ciberprotegido</p>
+            <p class="imposing-text">Sitio asegurado por D.M.C.A y ciberprotegido</p>
         </div>
         <div class="footer-image">
             <img src="./imgs/astronautOvni.png" alt="Logo en 360 grados" class="rotating-image">
@@ -1335,12 +1334,13 @@ h2:hover, h3:hover {
   gap: 40px; /* Espaciado entre los elementos */
   width: 100%;
   padding: 0 30px;
+  justify-items: center; /* Centra los elementos dentro de la cuadrícula */
+  align-items: center; /* Alineación vertical */
 }
 
 /* Estilo para cada tarjeta de servicio */
 .service-item {
   background: linear-gradient(to right, rgba(227, 245, 146, 0.7), rgba(75, 163, 235, 0.7));
-
   border-radius: 20px; /* Bordes redondeados */
   padding: 40px; /* Espaciado interior adecuado */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave y sutil */
@@ -1348,8 +1348,10 @@ h2:hover, h3:hover {
   text-align: center;
   max-width: 320px; /* Ancho máximo */
   width: 100%;
+  margin: 0 auto; /* Centra las tarjetas */
 }
 
+/* Efecto hover */
 .service-item:hover {
   transform: translateY(-12px); /* Efecto de elevación suave */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Sombra más intensa en hover */
@@ -1377,6 +1379,21 @@ h2:hover, h3:hover {
   transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
 }
 
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Columna única en pantallas pequeñas */
+    padding: 0 20px; /* Ajustar padding para pantallas pequeñas */
+  }
+
+  .service-item {
+    padding: 20px; /* Reducir padding en pantallas pequeñas */
+  }
+
+  .service-item h5 {
+    font-size: 24px; /* Reducir tamaño de fuente en pantallas pequeñas */
+  }
+}
 
 /* Footer */
 footer {
@@ -1408,26 +1425,58 @@ footer {
     transition: all 0.4s ease;
 }
 
-.footer-content a:hover {
-    color: #e67e22; /* Dorado cálido al pasar el ratón */
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Resplandor dorado suave */
-}
 
-.social-icons {
-    margin: 30px 0;
-}
 
+/* Estilo para los íconos de redes sociales */
 .social-icons a {
     margin: 0 25px;
     font-size: 2rem; /* Íconos más grandes */
-    color: #f1750f; /* Color dorado para los íconos */
     transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Facebook - Azul Facebook */
+.social-icons a[href="https://www.facebook.com/profile.php?id=100090806388122"] {
+    color: #0452fc; /* Color azul de Facebook */
+}
+
+/* Instagram - Morado y Amarillo Instagram */
+.social-icons a[href="https://www.instagram.com/hypernova.aerospace/"] {
+    color: #c217ec; /* Color morado-amarillo de Instagram */
+}
+
+/* Twitter - Azul Cielo */
+.social-icons a[href="https://twitter.com/Cohetes_ipn_m"] {
+    color: #1da1f2; /* Color azul cielo de Twitter */
+}
+
+/* TikTok - Rojo y Negro TikTok */
+.social-icons a[href="https://www.tiktok.com/"] {
+    color: #ff0050; /* Color negro de TikTok */
+}
+
+/* Efecto hover - Cambiar color en hover */
 .social-icons a:hover {
     transform: scale(1.3); /* Aumento suave al pasar el ratón */
     color: #f3f0f0; /* Color cálido en hover */
 }
+
+/* Personaliza el color al pasar el ratón sobre los íconos */
+.social-icons a[href="https://www.facebook.com/profile.php?id=100090806388122"]:hover {
+    color: #0452fc; /* Azul oscuro al hacer hover sobre el icono de Facebook */
+}
+
+.social-icons a[href="https://www.instagram.com/hypernova.aerospace/"]:hover {
+    color: #c217ec; /* Color rosa fuerte de Instagram al hacer hover */
+}
+
+.social-icons a[href="https://twitter.com/Cohetes_ipn_m"]:hover {
+    color: #00acee; /* Azul más brillante de Twitter al hacer hover */
+}
+
+.social-icons a[href="https://www.tiktok.com/"]:hover {
+    color: #ff0050; /* Rojo brillante de TikTok al hacer hover */
+}
+
 
 .imposing-text {
     font-size: 1.8rem; /* Aumentamos el tamaño para hacerlo más impresionante */
@@ -1491,4 +1540,3 @@ footer {
   </style>
 </body>
 </html>
-
